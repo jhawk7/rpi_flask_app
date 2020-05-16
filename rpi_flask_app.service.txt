@@ -1,0 +1,12 @@
+[Service]
+WorkingDirectory=/home/pirate/dev/python/rpi_flask_app
+ExecStart=/home/pirate/dev/python/rpi_flask_app/start_app.sh
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=rpi_flask_app
+User=root
+Group=root
+Environment=NODE_ENV=production
+[Install]
+WantedBy=multi-user.target
